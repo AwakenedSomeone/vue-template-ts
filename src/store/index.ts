@@ -10,7 +10,3 @@ export default createStore<RootStateTypes>({
     app
   }
 })
-export const key:InjectionKey<Store<RootStateTypes>>=Symbol('vue-store')
-export function useStore<T = RootStateTypes> () {
-  return baseUseStore<T>(key)
-}
