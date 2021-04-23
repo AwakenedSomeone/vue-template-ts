@@ -22,6 +22,7 @@ const config:AxiosRequestConfig = {
   showGlobalError: true
 }
 const axios = Axios.create(config)
+
 axios.interceptors.request.use((req:any) => {
   if (req.actionKey) {
     store.commit('loading/ADD_ACTIONS', req.actionKey)

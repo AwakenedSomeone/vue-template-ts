@@ -1,14 +1,7 @@
 
-interface AppStateTypes {
-  token: string;
-  userInfo: {}
-}
-
-interface LoadingStateTypes {
-  actions: []
-}
-
+import { StateUser } from './modules/app'
+import { LoadingStateTypes } from './modules/loading'
 export default interface RootStateTypes {
-  app: AppStateTypes;
+  app: StateUser;
   loading: LoadingStateTypes
 }

@@ -4,20 +4,20 @@ import router from '../../router'
 import { Commit } from 'vuex';
 let token = getToken()
 
-interface stateUser {
+export interface StateUser {
   token: string | null;
   userInfo: {}
 }
-const state:stateUser = {
+const state:StateUser = {
   token: token,
   userInfo: {}
 }
 
 const mutations = {
-  SET_USERINFO (state:stateUser, data:any) {
+  SET_USERINFO (state:StateUser, data:any) {
     state.userInfo = data
   },
-  SET_TOKEN (state:stateUser, token:string) {
+  SET_TOKEN (state:StateUser, token:string) {
     state.token = token
     setToken(token)
   }
